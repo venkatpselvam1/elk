@@ -41,6 +41,6 @@ services:
       XPACK_MONITORING_ENABLED: "true"
     volumes:
       - ./filebeat.yml:/usr/share/filebeat/filebeat.yml
-      - C:/Venkatesan/Stash/canonical/Console/Web/src/WebSln/WanderingWiFi.AirWatch.Console.Web/WebConsole.log:/var/log/airwatch/WebConsole.log
+      - /logpath:/var/log/airwatch
     depends_on:
       - logstash
